@@ -24,7 +24,7 @@ export class JWTAccessTokenManager implements IAccessTokenManager {
       exp:
         Math.floor(Date.now() / 1000) +
         JWTAccessTokenManager.ONE_DAY_IN_SECONDS,
-      iss: 'auth.microservices.com',
+      iss: 'auth.personal-playground-project.com',
       aud: 'myapp-client',
     };
 
