@@ -1,4 +1,4 @@
-import { GenerateTopHundredActiveUsersReportReadModel } from '../../../application/GenerateTopHundredActiveUsersReport/GenerateTopHundredActiveUsersReportReadModel';
+import { GenerateTopHundredActiveUsersReportReadModel } from '../../../../GenerateTopHundredActiveUsersReport/application/GenerateTopHundredActiveUsersReportReadModel';
 import { IUserActivityReadLayer } from '../../../application/IUserActivityReadLayer';
 
 interface UserActivityToReturnData {

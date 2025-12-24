@@ -1,10 +1,10 @@
 import { Inject } from '@nestjs/common';
 
-import { IQueryHandler } from '../../../../shared/queryBus/IQueryHandler';
+import { IQueryHandler } from '../../../shared/queryBus/IQueryHandler';
 import {
   IUserActivityReadLayer,
   USER_ACTIVITY_READ_LAYER,
-} from '../IUserActivityReadLayer';
+} from '../../shared/application/IUserActivityReadLayer';
 
 import { GenerateTopHundredActiveUsersReportQuery } from './GenerateTopHundredActiveUsersReportQuery';
 import {

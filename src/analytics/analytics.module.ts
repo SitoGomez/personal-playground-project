@@ -35,19 +35,19 @@ import { MikroOrmQueryBus } from '../shared/queryBus/infrastructure/mikroOrm/Mik
 import { QUERY_BUS } from '../shared/queryBus/IQueryBus';
 import { SharedModule } from '../shared/shared.module';
 
-import { GenerateTopHundredActiveUsersReportUseCase } from './user-activity/application/GenerateTopHundredActiveUsersReport/GenerateTopHundredActiveUsersReport.usecase';
-import { GenerateTopHundredActiveUsersReportQuery } from './user-activity/application/GenerateTopHundredActiveUsersReport/GenerateTopHundredActiveUsersReportQuery';
-import { USERS_REPORT_GENERATOR } from './user-activity/application/GenerateTopHundredActiveUsersReport/IUsersReportGenerator';
-import { USER_ACTIVITY_READ_LAYER } from './user-activity/application/IUserActivityReadLayer';
-import { RecordUserRegistrationUseCase } from './user-activity/application/RecordUserRegistration/RecordUserRegistration.usecase';
-import { RecordUserRegistrationCommand } from './user-activity/application/RecordUserRegistration/RecordUserRegistrationCommand';
-import { ProcessedEventEntity } from './user-activity/infrastructure/databases/mikroOrm/entities/ProcessedEvent.entity';
-import { UserActivityEntity } from './user-activity/infrastructure/databases/mikroOrm/entities/UserActivity.entity';
-import { createMikroOrmQueriesDDBBBaseConfig } from './user-activity/infrastructure/databases/mikroOrm/MikroOrmQueriesDDBB.base.config';
-import { MikroOrmUserActivityReadLayer } from './user-activity/infrastructure/databases/mikroOrm/MikroOrmUserActivityReadLayer';
-import { RabbitMQRecordUserRegistrationMessageHandler } from './user-activity/infrastructure/messageBrokers/rabbitMQ/consumers/RabbitMQRecordUserRegistration.messagehandler';
-import { CSVUserReportGenerator } from './user-activity/infrastructure/reports/CSVUsersReportGenerator';
-import { GenerateTopHundredActiveUsersReportScheduler } from './user-activity/infrastructure/schedulers/GenerateTopHundredActiveUsersReportScheduler';
+import { GenerateTopHundredActiveUsersReportUseCase } from './GenerateTopHundredActiveUsersReport/application/GenerateTopHundredActiveUsersReport.usecase';
+import { GenerateTopHundredActiveUsersReportQuery } from './GenerateTopHundredActiveUsersReport/application/GenerateTopHundredActiveUsersReportQuery';
+import { USERS_REPORT_GENERATOR } from './GenerateTopHundredActiveUsersReport/application/IUsersReportGenerator';
+import { CSVUserReportGenerator } from './GenerateTopHundredActiveUsersReport/infrastructure/reports/CSVUsersReportGenerator';
+import { GenerateTopHundredActiveUsersReportScheduler } from './GenerateTopHundredActiveUsersReport/infrastructure/schedulers/GenerateTopHundredActiveUsersReportScheduler';
+import { RecordUserRegistrationUseCase } from './RecordUserRegistration/application/RecordUserRegistration.usecase';
+import { RecordUserRegistrationCommand } from './RecordUserRegistration/application/RecordUserRegistrationCommand';
+import { RabbitMQRecordUserRegistrationMessageHandler } from './RecordUserRegistration/infrastructure/messageBrokers/rabbitMQ/consumers/RabbitMQRecordUserRegistration.messagehandler';
+import { USER_ACTIVITY_READ_LAYER } from './shared/application/IUserActivityReadLayer';
+import { ProcessedEventEntity } from './shared/infrastructure/databases/mikroOrm/entities/ProcessedEvent.entity';
+import { UserActivityEntity } from './shared/infrastructure/databases/mikroOrm/entities/UserActivity.entity';
+import { createMikroOrmQueriesDDBBBaseConfig } from './shared/infrastructure/databases/mikroOrm/MikroOrmQueriesDDBB.base.config';
+import { MikroOrmUserActivityReadLayer } from './shared/infrastructure/databases/mikroOrm/read-layers/MikroOrmUserActivityReadLayer';
 
 @Module({
   imports: [

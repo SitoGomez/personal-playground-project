@@ -1,10 +1,10 @@
 import { Inject } from '@nestjs/common';
 
-import { ICommandHandler } from '../../../../shared/commandBus/ICommandHandler';
+import { ICommandHandler } from '../../../shared/commandBus/ICommandHandler';
 import {
   IUserActivityReadLayer,
   USER_ACTIVITY_READ_LAYER,
-} from '../IUserActivityReadLayer';
+} from '../../shared/application/IUserActivityReadLayer';
 
 import { RecordUserRegistrationCommand } from './RecordUserRegistrationCommand';
 

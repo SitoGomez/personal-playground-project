@@ -1,7 +1,7 @@
 import { randomUUID } from 'crypto';
 
-import { UserActivityReadLayerMock } from '../../infrastructure/tests/mocks/UserActivityReadLayerMock';
-import { UsersReportGeneratorMock } from '../../infrastructure/tests/mocks/UsersReportGeneratorMock';
+import { UserActivityReadLayerMock } from '../../shared/infrastructure/tests/mocks/UserActivityReadLayerMock';
+import { UsersReportGeneratorMock } from '../infrastructure/tests/mocks/UsersReportGeneratorMock';
 
 import { GenerateTopHundredActiveUsersReportUseCase } from './GenerateTopHundredActiveUsersReport.usecase';
 import { GenerateTopHundredActiveUsersReportQuery } from './GenerateTopHundredActiveUsersReportQuery';

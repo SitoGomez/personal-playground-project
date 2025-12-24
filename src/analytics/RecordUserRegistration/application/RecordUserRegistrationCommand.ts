@@ -1,4 +1,4 @@
-import { BaseCommand } from '../../../../shared/commandBus/BaseCommand';
+import { BaseCommand } from '../../../shared/commandBus/BaseCommand';
 
 export class RecordUserRegistrationCommand extends BaseCommand {
   public readonly userId: string;

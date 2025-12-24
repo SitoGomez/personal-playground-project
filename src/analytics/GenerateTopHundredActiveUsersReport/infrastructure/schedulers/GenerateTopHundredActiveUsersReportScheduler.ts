@@ -3,7 +3,7 @@ import { Cron, CronExpression } from '@nestjs/schedule';
 
 import { ILogger, LOGGER } from '../../../../shared/logger/ILogger';
 import { IQueryBus, QUERY_BUS } from '../../../../shared/queryBus/IQueryBus';
-import { GenerateTopHundredActiveUsersReportQuery } from '../../application/GenerateTopHundredActiveUsersReport/GenerateTopHundredActiveUsersReportQuery';
+import { GenerateTopHundredActiveUsersReportQuery } from '../../application/GenerateTopHundredActiveUsersReportQuery';
 
 @Injectable()
 export class GenerateTopHundredActiveUsersReportScheduler {

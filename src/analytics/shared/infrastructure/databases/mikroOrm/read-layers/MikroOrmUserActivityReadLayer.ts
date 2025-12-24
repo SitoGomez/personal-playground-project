@@ -2,10 +2,9 @@ import { InjectEntityManager } from '@mikro-orm/nestjs';
 import { EntityManager, EntityRepository } from '@mikro-orm/postgresql';
 import { Injectable } from '@nestjs/common';
 
-import { GenerateTopHundredActiveUsersReportReadModel } from '../../../application/GenerateTopHundredActiveUsersReport/GenerateTopHundredActiveUsersReportReadModel';
-import { IUserActivityReadLayer } from '../../../application/IUserActivityReadLayer';
-
-import { UserActivityEntity } from './entities/UserActivity.entity';
+import { GenerateTopHundredActiveUsersReportReadModel } from '../../../../../GenerateTopHundredActiveUsersReport/application/GenerateTopHundredActiveUsersReportReadModel';
+import { IUserActivityReadLayer } from '../../../../application/IUserActivityReadLayer';
+import { UserActivityEntity } from '../entities/UserActivity.entity';
 
 @Injectable()
 export class MikroOrmUserActivityReadLayer implements IUserActivityReadLayer {

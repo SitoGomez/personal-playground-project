@@ -17,7 +17,7 @@ import {
   PROCESSED_EVENT_SERVICE,
 } from '../../../../../../shared/events/eventBus/IProcessedEventService';
 import { LOGGER, ILogger } from '../../../../../../shared/logger/ILogger';
-import { RecordUserRegistrationCommand } from '../../../../application/RecordUserRegistration/RecordUserRegistrationCommand';
+import { RecordUserRegistrationCommand } from '../../../../../RecordUserRegistration/application/RecordUserRegistrationCommand';
 
 @Injectable()
 export class RabbitMQRecordUserRegistrationMessageHandler extends RabbitMQConsumer<

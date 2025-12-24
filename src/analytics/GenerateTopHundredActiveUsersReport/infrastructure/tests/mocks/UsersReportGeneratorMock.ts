@@ -1,5 +1,5 @@
-import { GenerateTopHundredActiveUsersReportReadModel } from '../../../application/GenerateTopHundredActiveUsersReport/GenerateTopHundredActiveUsersReportReadModel';
-import { IUsersReportGenerator } from '../../../application/GenerateTopHundredActiveUsersReport/IUsersReportGenerator';
+import { GenerateTopHundredActiveUsersReportReadModel } from '../../../application/GenerateTopHundredActiveUsersReportReadModel';
+import { IUsersReportGenerator } from '../../../application/IUsersReportGenerator';
 
 export class UsersReportGeneratorMock implements IUsersReportGenerator {
   private stored: GenerateTopHundredActiveUsersReportReadModel[] = [];

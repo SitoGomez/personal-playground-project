@@ -1,4 +1,4 @@
-import { GenerateTopHundredActiveUsersReportReadModel } from './GenerateTopHundredActiveUsersReport/GenerateTopHundredActiveUsersReportReadModel';
+import { GenerateTopHundredActiveUsersReportReadModel } from '../../GenerateTopHundredActiveUsersReport/application/GenerateTopHundredActiveUsersReportReadModel';
 
 export interface IUserActivityReadLayer {
   saveUserRegistration(

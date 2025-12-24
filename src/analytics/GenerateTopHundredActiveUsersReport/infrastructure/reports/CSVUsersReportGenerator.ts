@@ -4,8 +4,8 @@ import { Inject, Injectable } from '@nestjs/common';
 import { createObjectCsvWriter } from 'csv-writer';
 
 import { ILogger, LOGGER } from '../../../../shared/logger/ILogger';
-import { GenerateTopHundredActiveUsersReportReadModel } from '../../application/GenerateTopHundredActiveUsersReport/GenerateTopHundredActiveUsersReportReadModel';
-import { IUsersReportGenerator } from '../../application/GenerateTopHundredActiveUsersReport/IUsersReportGenerator';
+import { GenerateTopHundredActiveUsersReportReadModel } from '../../application/GenerateTopHundredActiveUsersReportReadModel';
+import { IUsersReportGenerator } from '../../application/IUsersReportGenerator';
 
 @Injectable()
 export class CSVUserReportGenerator implements IUsersReportGenerator {

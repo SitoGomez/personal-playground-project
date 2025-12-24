@@ -1,4 +1,4 @@
-import { UserActivityReadLayerMock } from '../../infrastructure/tests/mocks/UserActivityReadLayerMock';
+import { UserActivityReadLayerMock } from '../../shared/infrastructure/tests/mocks/UserActivityReadLayerMock';
 
 import { RecordUserRegistrationUseCase } from './RecordUserRegistration.usecase';
 import { RecordUserRegistrationCommand } from './RecordUserRegistrationCommand';
