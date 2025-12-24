@@ -4,7 +4,7 @@ import { MikroORM } from '@mikro-orm/core';
 import { getMikroORMToken } from '@mikro-orm/nestjs';
 import { Injectable, Inject } from '@nestjs/common';
 
-import { IUserWasRegisteredEventData } from '../../../../../../auth/user/domain/events/UserRegistered.event';
+import { IUserWasRegisteredEventData } from '../../../../../../auth/RegisterUser/domain/events/UserRegistered.event';
 import {
   COMMAND_BUS,
   ICommandBus,

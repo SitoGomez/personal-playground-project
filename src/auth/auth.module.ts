@@ -51,21 +51,22 @@ import { WinstonLogger } from '../shared/logger/WinstonLogger';
 import { RequiredIdempotentKeyMiddleware } from '../shared/middlewares/RequiredIdempotentKeyMiddleware/RequiredIdempotentKeyMiddleware';
 import { SharedModule } from '../shared/shared.module';
 
-import { LoginUserCommand } from './user/application/LoginUser/LoginUser.command';
-import { LoginUserUseCase } from './user/application/LoginUser/LoginUser.usecase';
-import { RegisterUserCommand } from './user/application/RegisterUser/RegisterUser.command';
-import { RegisterUserUseCase } from './user/application/RegisterUser/RegisterUser.usecase';
-import { ACCESS_TOKEN_MANAGER } from './user/domain/IAccessTokenManager';
-import { PASSWORD_HASHER } from './user/domain/IPasswordHasher';
-import { USER_REPOSITORY } from './user/domain/UserRepository';
-import { JWTAccessTokenManager } from './user/infrastructure/accessTokenManager/JWTAccessTokenManager';
-import { LoginUserController } from './user/infrastructure/controllers/LoginUser/LoginUser.controller';
-import { RegisterUserController } from './user/infrastructure/controllers/RegisterUser/RegisterUser.controller';
-import { UserEntity } from './user/infrastructure/databases/mikroOrm/entities/User.entity';
-import { createMikroOrmCommandsDDBBBaseConfig } from './user/infrastructure/databases/mikroOrm/MikroOrmCommandsDDBB.base.config';
-import { MikroOrmUserMapper } from './user/infrastructure/databases/mikroOrm/MikroOrmUserMapper';
-import { MikroOrmUserRepository } from './user/infrastructure/databases/mikroOrm/MikroOrmUserRepository';
-import { BCryptPasswordHasher } from './user/infrastructure/hashers/BCryptPasswordHasher';
+import { LoginUserCommand } from './LoginUser/application/LoginUser.command';
+import { LoginUserUseCase } from './LoginUser/application/LoginUser.usecase';
+import { ACCESS_TOKEN_MANAGER } from './LoginUser/domain/IAccessTokenManager';
+import { JWTAccessTokenManager } from './LoginUser/infrastructure/accessTokenManager/JWTAccessTokenManager';
+import { LoginUserController } from './LoginUser/infrastructure/controller/LoginUser.controller';
+import { PASSWORD_HASHER } from './RegisterUser/domain/IPasswordHasher';
+import { BCryptPasswordHasher } from './RegisterUser/infrastructure/hashers/BCryptPasswordHasher';
+import { RegisterUserController } from './RegisterUser/infrastructure/RegisterUser.controller';
+import { RegisterUserCommand } from './RegisterUser/RegisterUser.command';
+import { RegisterUserUseCase } from './RegisterUser/RegisterUser.usecase';
+import { USER_REPOSITORY } from './shared/domain/UserRepository';
+import { UserEntity } from './shared/infrastructure/databases/mikroOrm/entities/User.entity';
+import { createMikroOrmCommandsDDBBBaseConfig } from './shared/infrastructure/databases/mikroOrm/MikroOrmCommandsDDBB.base.config';
+import { MikroOrmUserMapper } from './shared/infrastructure/databases/mikroOrm/repositories/MikroOrmUserMapper';
+import { MikroOrmUserRepository } from './shared/infrastructure/databases/mikroOrm/repositories/MikroOrmUserRepository';
+
 @Module({
   imports: [
     ConfigModule.forRoot({
