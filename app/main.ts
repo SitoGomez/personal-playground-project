@@ -1,5 +1,6 @@
 import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
+import 'app/instrument.js';
 
 import { AppModule } from './app.module';
 

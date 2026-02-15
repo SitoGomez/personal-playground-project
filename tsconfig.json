@@ -24,5 +24,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-  }
+    "allowJs": true
+  },
+  "include": ["src/**/*", "app/**/*"]
 }
