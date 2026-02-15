@@ -6,7 +6,7 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "build": "nest build",
+    "build": "nest build && pnpm sentry:sourcemaps",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "cross-env NODE_ENV=development nest start --entryFile app/main",
     "start:dev": "cross-env NODE_ENV=development nest start --entryFile app/main --watch",
@@ -27,7 +27,8 @@
     "mikroorm:all:recreate": "pnpm run mikroorm:auth:recreate && pnpm run mikroorm:analytics:recreate",
     "mikroorm:all:seed": "pnpm run mikroorm:auth:users:seed && pnpm run mikroorm:analytics:users-activity:seed",
     "mikroorm:all:recreate-and-seed": "pnpm run mikroorm:all:recreate && pnpm run mikroorm:all:seed",
-    "prepare": "husky"
+    "prepare": "husky",
+    "sentry:sourcemaps": "sentry-cli sourcemaps inject --org personal-3an --project node ./dist && sentry-cli sourcemaps upload --org personal-3an --project node ./dist"
   },
   "dependencies": {
     "@mikro-orm/core": "^6.4.16",
@@ -40,6 +41,7 @@
     "@nestjs/jwt": "^11.0.0",
     "@nestjs/platform-express": "^11.0.1",
     "@nestjs/schedule": "^6.0.0",
+    "@sentry/cli": "^2.58.4",
     "@sentry/node": "^10.38.0",
     "bcrypt": "^6.0.0",
     "class-transformer": "^0.5.1",
